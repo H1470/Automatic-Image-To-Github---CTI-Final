@@ -17,13 +17,13 @@ import os
 # Configuration variables
 excel_path = r"O:\NIA\PORTFOLIOS TEAM\Portfolios - 2026\CT UK PAIF\4. PBI\CTI Asset Book 12_05_26.xlsx" #Paste the file path to the excel here, the r at the start is important.
 sheet_name = 'Sheet1'
-image_column = 'H' # Column containing the photos
+image_column = 'J' # Column containing the photos
 id_column = 'A'    # Column containing property names or IDs to name the photo files
 github_user = 'H1470' #Add your github user here
 github_repo = 'Automatic-Image-To-Github---CTI-Final' #Add the repository name here
 branch = 'main' #Leave this alone probably
 folder = 'Images'  # This is the Images folder within this Folder, it will be populated with the image files
-filename_prefix = 'SP'  # Add a prefix to the start of each filename (e.g., 'CTI_', 'Property_'), leave empty for no prefix
+filename_prefix = 'Imone'  # Add a prefix to the start of each filename (e.g., 'CTI_', 'Property_'), leave empty for no prefix
 
 os.makedirs(folder, exist_ok=True)
 
@@ -67,7 +67,7 @@ print(f"  Rows with ID in column B: {rows_with_id}")
 print(f"  Images found and processed: {images_found}")
 
 # Export the ready-to-paste URLs
-pd.DataFrame(output_data).to_excel("github_image_links.xlsx", index=False)
+pd.DataFrame(output_data).to_excel("Imone_github_image_links.xlsx", index=False)
 print("Extraction and link generation complete!")
 
 #Once the code has run, there will be a message in the terminal saying it has completed. Then head to the github section on the left hand br, and click commit.
